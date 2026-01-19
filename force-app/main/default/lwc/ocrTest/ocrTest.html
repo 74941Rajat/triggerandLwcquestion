@@ -1,0 +1,16 @@
+<template>
+    <lightning-card title="PDF OCR Reader">
+        <div class="slds-p-around_medium">
+            <input type="file" accept="application/pdf" onchange={handleFileChange} />
+        </div>
+
+        <template if:true={isProcessing}>
+            <lightning-spinner alternative-text="Processing PDF..." size="medium"></lightning-spinner>
+        </template>
+
+        <template if:true={extractedText}>
+            <lightning-textarea label="Extracted Text" value={extractedText} readonly rows="15">
+            </lightning-textarea>
+        </template>
+    </lightning-card>
+</template>

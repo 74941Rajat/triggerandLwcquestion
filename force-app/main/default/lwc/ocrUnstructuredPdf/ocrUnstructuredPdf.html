@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="OCR - Unstructured PDF">
+        <input type="file" accept=".pdf" onchange={handleFileChange} />
+        <template if:true={ocrText}>
+            <p><strong>Extracted Text:</strong></p>
+            <ul>
+                <template for:each={ocrText} for:item="line">
+                    <li key={line}>{line}</li>
+                </template>
+            </ul>
+        </template>
+    </lightning-card>
+</template>
