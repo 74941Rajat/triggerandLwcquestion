@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Accounts With Opportunities">
+        <template if:true={isRecordAvailable}>
+            <lightning-datatable key-field="Id" data={accountResult.data} columns={columns}
+                onrowaction={handleRowAction}>
+            </lightning-datatable>
+        </template>
+
+        <template if:false={isRecordAvailable}>
+            <p class="slds-p-around_medium">No records found</p>
+        </template>
+    </lightning-card>
+</template>
