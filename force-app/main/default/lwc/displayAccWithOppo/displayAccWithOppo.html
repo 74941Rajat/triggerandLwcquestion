@@ -1,7 +1,7 @@
 <template>
     <lightning-card title="Accounts With Opportunities">
         <template if:true={isRecordAvailable}>
-            <lightning-datatable key-field="Id" data={accountResult.data} columns={columns}
+            <lightning-datatable key-field="Id" data={wiredResult.data} columns={columns}
                 onrowaction={handleRowAction}>
             </lightning-datatable>
         </template>

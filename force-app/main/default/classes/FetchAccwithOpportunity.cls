@@ -22,6 +22,17 @@ public with sharing class FetchAccwithOpportunity {
 
     }
 
+    @AuraEnabled
+    public static void deleteAccountaccToOppo(string accountId){
+        Account acc=[Select Id, Name,(Select Id from Opportunities where isClosed=false ) from Account where id= :accountId];
+           if(acc.Opportunities.size()>0){
+              throw new AuraHandledException('Account cannot be delete due to open opportunities');
+           }
+           else {
+            delete acc;
+           }
+    }
+
             public class OutputWapper{
             
                 @AuraEnabled
