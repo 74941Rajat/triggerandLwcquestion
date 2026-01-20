@@ -9,12 +9,14 @@ public with sharing class Q3_NoConAccwithAcchandler {
         }
 
         list<Account>acclist=[Select Id, Name, Contact_Count__c,(select Id from contacts) from Account];
-
+        list<Account> updateacc=new list<Account>();
         for(Account acc: acclist){
            if(accIds.contains(acc.Id)){
                   acc.Contact_Count__c=acc.contacts.size();
+                  updateacc.add(acc);
            }
         }
+        update updateacc;
       }     
        
     }
