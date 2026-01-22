@@ -1,0 +1,42 @@
+<template>
+    <section class="projects-section" data-id="projects">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Key Projects</h2>
+                <p class="section-subtitle">
+                    Delivering impactful Salesforce solutions across diverse industries
+                </p>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <template for:each={projects} for:item="project">
+                    <div key={project.title} class="project-card">
+                        <div class={project.iconClass}>
+                            <lightning-icon icon-name={project.icon} size="medium" class="icon-white"></lightning-icon>
+                        </div>
+
+                        <h3 class="project-title">{project.title}</h3>
+                        <p class="project-description">{project.description}</p>
+
+                        <ul class="project-highlights">
+                            <template for:each={project.highlights} for:item="highlight">
+                                <li key={highlight} class="highlight-item">
+                                    <span class="highlight-dot"></span>
+                                    <span>{highlight}</span>
+                                </li>
+                            </template>
+                        </ul>
+
+                        <div class="project-tags">
+                            <template for:each={project.tags} for:item="tag">
+                                <span key={tag} class="project-tag">{tag}</span>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </section>
+</template>

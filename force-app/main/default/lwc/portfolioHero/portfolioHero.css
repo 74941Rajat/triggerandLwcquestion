@@ -1,0 +1,309 @@
+/* Hero Section */
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, #0d3880, #0a2a5c);
+}
+
+.background-decorations {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+}
+
+.decoration-top {
+    top: -160px;
+    right: -160px;
+    width: 320px;
+    height: 320px;
+    background: rgba(0, 176, 240, 0.1);
+    animation: pulse-glow 8s ease-in-out infinite;
+}
+
+.decoration-bottom {
+    bottom: -160px;
+    left: -160px;
+    width: 384px;
+    height: 384px;
+    background: rgba(0, 176, 240, 0.05);
+    animation: pulse-glow 10s ease-in-out infinite reverse;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 10;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+}
+
+.hero-content {
+    max-width: 896px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Badge */
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+    animation: fade-slide-up 0.5s ease-out;
+}
+
+.pulse-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #00b0f0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.badge-text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Name & Title */
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+    animation: fade-slide-up 0.6s ease-out 0.1s both;
+}
+
+.hero-title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #00b0f0;
+    margin-bottom: 1.5rem;
+    animation: fade-slide-up 0.6s ease-out 0.2s both;
+}
+
+/* Certifications */
+.certifications-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    animation: fade-slide-up 0.6s ease-out 0.3s both;
+}
+
+.cert-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Description */
+.hero-description {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 672px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+    animation: fade-slide-up 0.6s ease-out 0.4s both;
+}
+
+/* CTA Buttons */
+.cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    animation: fade-slide-up 0.6s ease-out 0.5s both;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #00b0f0, #0d5eaf);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    box-shadow: 0 8px 30px -8px rgba(0, 176, 240, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 40px -8px rgba(0, 176, 240, 0.5);
+}
+
+.btn-glass {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Contact Info */
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    animation: fade-in 0.6s ease-out 0.6s both;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: #00b0f0;
+}
+
+/* Icons */
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.icon-small {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fade-in 0.6s ease-out 0.8s both;
+}
+
+.scroll-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scroll-button:hover {
+    color: #00b0f0;
+}
+
+.scroll-text {
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fade-slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { 
+        transform: scale(1);
+        opacity: 0.3;
+    }
+    50% { 
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .hero-name {
+        font-size: 4rem;
+    }
+    .hero-title {
+        font-size: 2.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-name {
+        font-size: 4.5rem;
+    }
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}

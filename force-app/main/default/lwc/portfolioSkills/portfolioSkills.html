@@ -1,0 +1,40 @@
+<template>
+    <section class="skills-section" data-id="skills">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">
+                    Comprehensive expertise in Salesforce ecosystem and modern development practices
+                </p>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="skills-grid">
+                <template for:each={skillCategories} for:item="category">
+                    <div key={category.title} class="skill-card">
+                        <div class={category.iconClass}>
+                            <lightning-icon icon-name={category.icon} size="small" class="icon-white"></lightning-icon>
+                        </div>
+                        <h3 class="skill-title">{category.title}</h3>
+                        <div class="skill-tags">
+                            <template for:each={category.skills} for:item="skill">
+                                <span key={skill} class="skill-tag">{skill}</span>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </div>
+
+            <!-- Programming Languages -->
+            <div class="languages-section">
+                <h3 class="languages-title">Programming Languages</h3>
+                <div class="languages-grid">
+                    <template for:each={programmingLanguages} for:item="lang">
+                        <div key={lang} class="language-badge">{lang}</div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>

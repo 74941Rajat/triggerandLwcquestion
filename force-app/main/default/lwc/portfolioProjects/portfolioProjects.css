@@ -1,0 +1,151 @@
+/* Projects Section */
+.projects-section {
+    padding: 5rem 0 8rem;
+    background: #f5f7fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0d3880, #00b0f0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.125rem;
+    color: #6b7280;
+    max-width: 672px;
+    margin: 0 auto;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 1152px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background: white;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 12px -2px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px -8px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon Container */
+.icon-container {
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 20px -4px rgba(0, 0, 0, 0.08);
+}
+
+.primary-gradient {
+    background: linear-gradient(135deg, #0d3880, #0d3880cc);
+}
+
+.accent-gradient {
+    background: linear-gradient(135deg, #00b0f0, #00b0f0cc);
+}
+
+.mixed-gradient {
+    background: linear-gradient(135deg, #0d3880, #00b0f0);
+}
+
+.accent-secondary-gradient {
+    background: linear-gradient(135deg, #00b0f0cc, #0d3880cc);
+}
+
+.icon-white {
+    --slds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-foreground: white;
+}
+
+/* Project Content */
+.project-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+}
+
+.project-description {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.625;
+}
+
+/* Highlights */
+.project-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.highlight-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: rgba(31, 41, 55, 0.8);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00b0f0;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.project-tag {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    border-radius: 9999px;
+    background: #f3f4f6;
+    color: #374151;
+}
