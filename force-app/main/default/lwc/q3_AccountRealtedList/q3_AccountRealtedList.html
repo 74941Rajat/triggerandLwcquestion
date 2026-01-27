@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="Account Related List">
+
+        <lightning-combobox label="Account" placeholder="Select Account" options={options} onchange={handleChange}>
+        </lightning-combobox>
+
+        <!-- CASES -->
+        <div class="slds-var-p-top_medium">
+            <div class="slds-heading_medium"><b>Related Cases</b></div>
+
+            <template lwc:if={cases.length}>
+                <lightning-datatable key-field="Id" data={cases} columns={casesColumns}>
+                </lightning-datatable>
+            </template>
+
+            <template lwc:else>
+                No Cases found
+            </template>
+        </div>
+
+        <!-- CONTACTS -->
+        <div class="slds-var-p-top_medium">
+            <div class="slds-heading_medium"><b>Related Contacts</b></div>
+
+            <template lwc:if={contacts.length}>
+                <lightning-datatable key-field="Id" data={contacts} columns={contactColumns}>
+                </lightning-datatable>
+            </template>
+
+            <template lwc:else>
+                No Contacts found
+            </template>
+        </div>
+
+    </lightning-card>
+</template>
