@@ -1,5 +1,5 @@
 trigger Q11_preventDupliacteCon on Contact (before insert,before update) {
 
-    Q11_preventDupliacteConHandler.prevetconduplicate(Trigger.new);
+    Q11_preventDupliacteConHandler.preventConDuplicate(Trigger.new);
 
 }
